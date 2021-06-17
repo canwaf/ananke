@@ -21,7 +21,7 @@ anytree = "*"
 pylint = "*"
 black = "*"
 flake8 = "*"
-vcrpy-unittest = "*"
+nose2 = "*"
 jupyter = "*"
 
 
