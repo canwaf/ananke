@@ -2,10 +2,9 @@
 
 url = "https://pypi.python.org/simple"
 verify_ssl = true
-name = "pypi"
+name = "ananke"
 
 [packages]
-jupyter = "*"
 backoff = "*"
 sparqlwrapper = "*"
 sparqlkernel = "*"
@@ -14,11 +13,16 @@ seaborn = "*"
 requests = "*"
 cachecontrol = "*"
 openpyxl = "*"
-lockfile = "*"
 statsmodels = "*"
+click = "*"
+anytree = "*"
 
 [dev-packages]
 pylint = "*"
+black = "*"
+flake8 = "*"
+vcrpy-unittest = "*"
+jupyter = "*"
 
 
 [requires]

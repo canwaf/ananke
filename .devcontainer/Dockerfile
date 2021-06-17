@@ -5,6 +5,6 @@ ENV PIPENV_TIMEOUT=36000
 COPY Pipfile Pipfile.lock ./
 ENV PIP_NO_CACHE_DIR=false
 RUN pip install pipenv
-RUN pipenv install --system
+RUN pipenv install --system --dev
 RUN jupyter sparqlkernel install
 RUN apt update && apt install gnupg2 jq -y
