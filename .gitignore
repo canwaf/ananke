@@ -130,3 +130,6 @@ dmypy.json
 
 # Apple crap
 .DS_Store
+
+# Databases
+*.db
