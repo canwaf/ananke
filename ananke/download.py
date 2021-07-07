@@ -44,7 +44,9 @@ def get_sparql(query_text: str) -> pd.DataFrame:
     con = sqlite3.connect(f"{endpoint_hex}.db")
 
     # check if the query_hex exists
-    exist_query = f"SELECT count(*) FROM sqlite_master WHERE type='table' AND name='{query_hex}';"
+    exist_query = (
+        f"SELECT count(*) FROM sqlite_master WHERE type='table' AND name='{query_hex}';"
+    )
     exist_result = bool(con.execute(exist_query).fetchone()[0])  # 0 = False
 
     if exist_result:
@@ -57,7 +59,7 @@ def get_sparql(query_text: str) -> pd.DataFrame:
         results = sparql.queryAndConvert()
 
         # normalise the json results
-        df = pd.json_normalize(results['results']['bindings'])
+        df = pd.json_normalize(results["results"]["bindings"])
 
         # store the results in db
         df.to_sql(query_hex, con)
