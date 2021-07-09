@@ -1,7 +1,7 @@
 import pandas as pd
 
 from urllib.parse import urlparse
-
+from typing import List
 
 def get_fragment(url: str) -> str:
     """Function to parse a url when you can't depend on the fragment
@@ -41,3 +41,5 @@ def get_dimensions(components: pd.DataFrame) -> list:
     ]
 
     return list(dimensions.apply(lambda x: get_fragment(x)))
+
+# def compare_dimensions(List[str]) -> 
