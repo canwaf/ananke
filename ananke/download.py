@@ -16,7 +16,7 @@ def get_endpoint() -> str:
         url (str): the endpoint url
     """
 
-    sparql = SPARQLWrapper("https://staging.gss-data.org.uk/sparql")
+    sparql = SPARQLWrapper("https://beta.gss-data.org.uk/sparql")
 
     sparql.setReturnFormat(JSON)
 
