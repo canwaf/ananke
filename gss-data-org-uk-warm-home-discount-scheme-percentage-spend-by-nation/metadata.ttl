@@ -1,0 +1,32 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pmdcat: <http://publishmydata.com/pmdcat#> .
+@prefix ns1: <http://gss-data.org.uk/def/gdp#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure-catalog-entry>
+  dc:modified "2021-02-09T08:02:58.731527Z"^^xsd:dateTime ;
+  dc:publisher <https://www.gov.uk/government/organisations/the-office-of-gas-and-electricity-markets> ;
+  dc:description """
+Data shows a by nation view of the direct support provided to fuel poor customers through energy bill rebates for the ‘core group’ and ‘broader group’ elements of the Warm Home Discount (WHD). It comprises all participating suppliers in year 8 (2018/19) of the scheme.
+The WHD is a government energy scheme which aims to help people who are in fuel poverty or are at risk of it. It focuses spending against three different support elements, categorised as ‘core group’, ‘broader group’ and ‘industry initiative’ spending.
+For more on the scheme elements and how they work, see our overview page at Warm Home Discount:
+https://www.ofgem.gov.uk/environmental-programmes/social-programmes/warm-home-discount-whd
+We have gathered this information from obligated suppliers for information purposes, and as such it should be considered as advisory only. Scheme year 5 (2015/6) was the first year we have collected this data.
+We update this chart on an annual basis.
+"""@en ;
+  pmdcat:graph <http://gss-data.org.uk/graph/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure> ;
+  ns1:family ns1:edvp ;
+  dc:issued "2019-12-18"^^xsd:date ;
+  rdfs:label "Warm Home Discount Scheme: Percentage spend by nation"@en ;
+  pmdcat:datasetContents <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset> ;
+  void:sparqlEndpoint <http://gss-data.org.uk/sparql> ;
+  dc:creator <https://www.gov.uk/government/organisations/the-office-of-gas-and-electricity-markets> ;
+  a pmdcat:Dataset ;
+  dcat:landingPage <https://www.ofgem.gov.uk/environmental-programmes/social-programmes/warm-home-discount/warm-home-discount-reports-and-statistics> ;
+  rdfs:comment """
+This data shows a by nation view of the direct support provided to fuel poor customers through energy bill rebates for the ‘core group’ and ‘broader group’ elements of the Warm Home Discount (WHD).
+"""@en ;
+  dc:title "Warm Home Discount Scheme: Percentage spend by nation"@en .

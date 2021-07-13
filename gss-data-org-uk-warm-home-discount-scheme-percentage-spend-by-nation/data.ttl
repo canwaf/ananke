@@ -1,0 +1,116 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://gss-data.org.uk/def/gdp#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix sdmx: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix ns2: <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/> .
+@prefix ns3: <http://gss-data.org.uk/def/measure/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://gss-data.org.uk/graph/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure> prov:wasGeneratedBy <https://ci.floop.org.uk/job/GSS_data/job/EDVP/job/Ofgem-Warm-Home-Discount-scheme/42/> .
+qb:measureType
+  a qb:DimensionProperty ;
+  rdfs:range qb:MeasureProperty .
+
+<http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> a qb:AttributeProperty .
+<https://ci.floop.org.uk/job/GSS_data/job/EDVP/job/Ofgem-Warm-Home-Discount-scheme/>
+  a prov:Agent ;
+  rdfs:label "GSS_data » Energy Data Visibility » Ofgem-Warm-Home-Discount-scheme" ;
+  ns0:uniqueID "NDY2MWI5ODgtOGY1Ny00MTVkLTk1Nj" .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset>
+  a dcat:Dataset, qb:DataSet ;
+  qb:structure <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#structure> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#structure>
+  a qb:DataStructureDefinition ;
+  qb:component <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/measure_type>, <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/nation>, <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/period>, <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/scheme-year>, <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/unit>, <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/value> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/measure_type>
+  a qb:ComponentSpecification ;
+  qb:componentProperty qb:measureType ;
+  qb:dimension qb:measureType .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/nation>
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/nation> ;
+  qb:dimension <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/nation> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/period>
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/period> ;
+  qb:dimension <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/period> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/scheme-year>
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/scheme-year> ;
+  qb:dimension <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/scheme-year> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/unit>
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> ;
+  qb:attribute <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#component/value>
+  a qb:ComponentSpecification ;
+  qb:componentProperty <http://gss-data.org.uk/def/measure/expenditure> ;
+  qb:measure <http://gss-data.org.uk/def/measure/expenditure> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/period>
+  a qb:DimensionProperty ;
+  rdfs:label "Period"@en ;
+  rdfs:range <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#class/Period> ;
+  rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/scheme-year>
+  a qb:DimensionProperty ;
+  rdfs:label "Scheme Year"@en ;
+  rdfs:comment "Defined scheme year and year range"@en ;
+  rdfs:range <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#class/SchemeYear> ;
+  qb:codeList <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme#scheme/scheme-year> .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dimension/nation>
+  a qb:DimensionProperty ;
+  rdfs:label "Nation"@en ;
+  rdfs:range <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#class/Nation> ;
+  rdfs:subPropertyOf <http://purl.org/linked-data/sdmx/2009/dimension#refArea> .
+
+<http://gss-data.org.uk/def/measure/expenditure> a qb:MeasureProperty .
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure/gregorian-interval/2018-08-15T00:00:00/P228D/year-8/E92000001>
+  a qb:Observation ;
+  qb:dataSet <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset> ;
+  qb:measureType <http://gss-data.org.uk/def/measure/expenditure> ;
+  sdmx:unitMeasure <http://gss-data.org.uk/def/concept/measurement-units/percentage> ;
+  ns2:period <http://reference.data.gov.uk/id/gregorian-interval/2018-08-15T00:00:00/P228D> ;
+  ns2:scheme-year <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme#concept/scheme-year/year-8> ;
+  ns2:nation <http://statistics.data.gov.uk/id/statistical-geography/E92000001> ;
+  ns3:expenditure 83.46 .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure/gregorian-interval/2018-08-15T00:00:00/P228D/year-8/S92000003>
+  a qb:Observation ;
+  qb:dataSet <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset> ;
+  qb:measureType ns3:expenditure ;
+  sdmx:unitMeasure <http://gss-data.org.uk/def/concept/measurement-units/percentage> ;
+  ns2:period <http://reference.data.gov.uk/id/gregorian-interval/2018-08-15T00:00:00/P228D> ;
+  ns2:scheme-year <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme#concept/scheme-year/year-8> ;
+  ns2:nation <http://statistics.data.gov.uk/id/statistical-geography/S92000003> ;
+  ns3:expenditure 10.11 .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure/gregorian-interval/2018-08-15T00:00:00/P228D/year-8/W92000004>
+  a qb:Observation ;
+  qb:dataSet <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset> ;
+  qb:measureType ns3:expenditure ;
+  sdmx:unitMeasure <http://gss-data.org.uk/def/concept/measurement-units/percentage> ;
+  ns2:period <http://reference.data.gov.uk/id/gregorian-interval/2018-08-15T00:00:00/P228D> ;
+  ns2:scheme-year <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme#concept/scheme-year/year-8> ;
+  ns2:nation <http://statistics.data.gov.uk/id/statistical-geography/W92000004> ;
+  ns3:expenditure 6.43 .
+
+<https://ci.floop.org.uk/job/GSS_data/job/EDVP/job/Ofgem-Warm-Home-Discount-scheme/42/>
+  a prov:Activity ;
+  rdfs:label "GSS_data » Energy Data Visibility » Ofgem-Warm-Home-Discount-scheme #42" ;
+  prov:wasAssociatedWith <https://ci.floop.org.uk/job/GSS_data/job/EDVP/job/Ofgem-Warm-Home-Discount-scheme/> ;
+  prov:generatedAtTime "2021-02-09T08:02:41.936Z"^^xsd:dateTime .
+
+<http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#tables> prov:hadDerivation <http://gss-data.org.uk/data/gss_data/edvp/ofgem-warm-home-discount-scheme/nationexpenditure#dataset> .

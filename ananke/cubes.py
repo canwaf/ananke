@@ -2,7 +2,7 @@ from abc import ABC
 import datetime
 
 from ananke.download import get_sparql
-from typing import List
+from typing import List, Tuple
 from pandas import DataFrame
 
 class Component(ABC):
@@ -21,7 +21,7 @@ class Component(ABC):
         # get the labels
         pass
 
-    def get_component_metadata(self):
+    def _get_component_metadata(self):
         pass
 
 
@@ -29,6 +29,9 @@ class Attribute(Component):
     """ An attribute is a component with no associated links, specific to the dataset.
     
     """
+
+    # Check if the URI provided is infact an Attribute
+
     pass
     
 
@@ -43,7 +46,11 @@ class Dimension(Component):
         self.dimension: str
         self.subPropertyOf: str
         self.codelist: dict
+    
+        # Check if the URI provided is infact an Dimension
 
+    def _get_component_metadata(self):
+        pass
 
 class Dataset(ABC):
     def __init__(self, url: str):
@@ -62,6 +69,27 @@ class Dataset(ABC):
 
         self.components: List[Dimension, Attribute] # QB 
         self.data: DataFrame # QB
-    
-    def fetch_attributes(self):
+
+        # Check if the URI provided is infact a DataSet
+
+    def size(self) -> Tuple[int,int]:
         pass
+
+    def materialise(self):
+        pass
+
+    def compare(self, other: Dataset):
+        pass
+
+    def describe(self):
+        pass
+
+    def slice(self, fixed=List, common=str, observations=str) -> DataFrame:
+        pass
+
+    def _get_data(self):
+        pass
+    
+    def _get_structure(self):
+        pass
+
