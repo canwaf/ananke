@@ -17,6 +17,7 @@ class Component(ABC):
         self.url: str = url
         self.label: str
         self.type: str
+        self.comment: str
 
         # get the labels
         pass
@@ -30,6 +31,9 @@ class Attribute(Component):
     
     """
 
+    def __init(self, url: str):
+        pass
+        
     # Check if the URI provided is infact an Attribute
 
     pass
@@ -52,6 +56,26 @@ class Dimension(Component):
     def _get_component_metadata(self):
         pass
 
+class Measure(Dimension):
+    """ A measure is a special dimension of the dataset which defines what is being measured
+    (e.g. count, expendature)
+    
+    """
+
+    def __init__(self, url: str):
+        pass
+
+class Unit(Component):
+    """ A unit is a component of the dataset which qualifies the observation value.
+
+    range (str) - the range of the unit (e.g. decimal, integer, or a codelist)
+    
+    """
+
+    def __init__(self, url: str):
+        self.range: str
+
+
 class Dataset(ABC):
     def __init__(self, url: str):
         self.url: str = url
@@ -67,7 +91,7 @@ class Dataset(ABC):
         self.creator: str # DCAT
         self.comment: str # DCAT
 
-        self.components: List[Dimension, Attribute] # QB 
+        self.components: List[Dimension, Attribute, Unit, Measure] # QB 
         self.data: DataFrame # QB
 
         # Check if the URI provided is infact a DataSet
